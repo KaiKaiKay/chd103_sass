@@ -1,20 +1,17 @@
-//寫法 @mixin function名稱(){屬性值,組件...}
-//呼叫 @include function名稱()
-
-// 置中 把寬&高設定變數 $w & $h 要用時再在()設定值帶入 預設沒有高就設定成null
+// 置中
 @mixin center($w, $h: null) {
   margin: 0 auto;
   width: $w;
   height: $h;
 }
 
-// 方形 預設寬高一樣 不寫$h值就會直接帶入$w的值
+// 方形
 @mixin rect($w, $h: $w) {
   width: $w;
   height: $h;
 }
 
-// layout 當寬被設定為100%時->滿版 若寬為其他數值->最大寬$w且水平置中
+// layout
 @mixin layout($w) {
   @if $w == 100% {
     width: 100%;
@@ -25,7 +22,6 @@
   }
 }
 
-//加入@content 表示還可以增加其他屬性
 @mixin a() {
   font-size: 20px;
   &:hover {
@@ -37,7 +33,6 @@ a {
   color: #333;
   @include a() {
     color: #999;
-    //因為a()的@content寫在&:hover 所以color: #999; 就會變成a被hover後的顏色
   }
 }
 
@@ -57,7 +52,7 @@ a {
 
 @mixin set($val) {
   @media all and (max-width: $val) {
-    // 客製化 自訂斷點
+    // 客製化
     @content;
   }
 }
@@ -72,7 +67,6 @@ a {
   }
 }
 
-//中、英文字樣式
 @mixin fontstyle($style) {
   @if $style == "zh" {
     font-family: "Noto Sans TC", sans-serif;
@@ -81,17 +75,16 @@ a {
   }
 }
 
-//border
+
 @mixin border($color , $border : true){
-  @if $border {
-    border: 1px solid $color;
-    border-radius: 6px;
-  }@else {
-    border: initial;
-  }
+   @if $border {
+     border: 1px solid $color;
+     border-radius: 6px;
+   }@else {
+     border: initial;
+   }
 }
 
-//按鈕顏色
 @mixin btnColor($bgc , $border: false) {
   @if $border {
     border: 1px solid $bgc;
@@ -105,6 +98,73 @@ a {
     color: #fff;
     &:hover {
       background-color: darken($bgc, 10);
+    }
+  }
+}
+
+
+//================== space ====================  
+// if true => position  false => margin
+//  @include spacing(100 , true);
+@mixin spacing($val , $position:true) {
+  @for $i from 1 through $val {
+    .top_#{$i} {
+      @if $position {
+           position: relative;
+           top : $i + px
+      }@else {
+         margin-top: $i + px;
+      }
+    }
+    .bottom_#{$i} {
+     @if $position {
+           position: relative;
+           bottom : $i + px
+      }@else {
+         margin-bottom: $i + px;
+      }
+    }
+    .left_#{$i} {
+      @if $position {
+           position: relative;
+           left : $i + px
+      }@else {
+         margin-left: $i + px;
+      }
+    }
+    .right_#{$i} {
+      @if $position {
+           position: relative;
+           right : $i + px
+      }@else {
+         margin-right: $i + px;
+      }
+    }
+  }
+}
+
+
+//========== grid =========
+// @include grid(12); 桌機
+// @include t() {
+//   @include grid(12 , md);
+// }  平板
+
+// @include m(){
+//    @include grid(12, sm);
+// } 手機
+
+
+@mixin grid($val, $class: default) {
+  @for $i from 1 through $val {
+    @if $class == default {
+      .col-#{$i} {
+        width: ($i/ $val) * 100%;
+      }
+    } @else {
+      .col-#{$class}-#{$i} {
+        width: ($i/ $val) * 100%;
+      }
     }
   }
 }

@@ -69,7 +69,6 @@ function styleSass() {
     return src('./src/sass/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(dest('./dist/css'));
-        //如果改成 sync({outputStyle:'compressed'}) css就會變成一行
 }
 
 exports.style = styleSass
@@ -78,8 +77,28 @@ exports.style = styleSass
 //監看所以變動
 
 function watchTask(){
-   watch(['./src/*.html' , './src/layout/*.html'] , includeHTML)
-   watch(['./src/sass/*.scss' , './src/sass/**/*.scss'] , styleSass)
+watch(['./src/*.html' , './src/layout/*.html'] , includeHTML)
+watch(['./src/sass/*.scss' , './src/sass/**/*.scss'] , styleSass)
 }
 
 exports.w = watchTask
+
+
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['./src/*.html' , './src/layout/*.html'] , includeHTML).on('change' , reload)
+    watch(['./src/sass/*.scss' , './src/sass/**/*.scss'] , styleSass).on('change' , reload)
+    done();
+}
+
+exports.dev = browser;

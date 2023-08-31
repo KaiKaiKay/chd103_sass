@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>產品頁</title>
-  </head>
-  <body>
-    <div class="wrapper_full">
-      <script src="https://unpkg.com/vue@next"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>產品頁</title>
+</head>
+
+<body>
+  <div class="wrapper_full">
+    <script src="https://unpkg.com/vue@next"></script>
 <header id="app">
     <h1 class="logo">logo</h1>
     <nav>
@@ -42,10 +44,14 @@
         }
     }).mount('#app')
 </script>
-      <div class="content product">
-        <h1>產品</h1>
+    <div class="content product container">
+      <h1>產品</h1>
+      <div class="row">
+        <div class="col-3 col-md-6 col-sm-12 primary">col4</div>
+        <div class="col-9 col-md-6 col-sm-12 secondary">col8</div>
       </div>
-      <footer>
+    </div>
+    <footer>
      <h2 class="logo">footer</h2>
      <nav>
         <ul>
@@ -53,6 +59,7 @@
         </ul>
      </nav>
 </footer>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
