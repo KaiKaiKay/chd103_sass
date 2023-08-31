@@ -9,3 +9,21 @@ h1 {
   @include fontstyle(en);
   //變數設定在mixin裡
 }
+
+
+
+@each $k, $v in $fontsizes {
+  #{$k} {
+    font-size: $v;
+  }
+}
+
+
+@each $k, $v in $color {
+  .#{$k}_bg {
+    background-color: $v;
+  }
+  .#{$k}_color {
+     color: $v
+  }
+}

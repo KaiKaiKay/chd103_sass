@@ -96,8 +96,13 @@ function browser(done) {
         },
         port: 3000
     });
+<<<<<<< HEAD
     watch(['./src/*.html' , './src/layout/*.html'] , includeHTML).on('change' , reload)
     watch(['./src/sass/*.scss' , './src/sass/**/*.scss'] , styleSass).on('change' , reload)
+=======
+     watch(['./src/*.html' , './src/layout/*.html'] , includeHTML).on('change' , reload)
+     watch(['./src/sass/*.scss' , './src/sass/**/*.scss'] , styleSass).on('change' , reload)
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669
     done();
 }
 

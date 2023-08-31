@@ -17,6 +17,11 @@
 @import "component/body";
 @import "component/title";
 @import "component/spacing";
+<<<<<<< HEAD
+=======
+@import "component/grid";
+@import "component/banner";
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669
 
 // layout
 @import "layout/header";
@@ -54,5 +59,37 @@ $color: red;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+TC:wght@100;400&family=Roboto&display=swap");
+<<<<<<< HEAD
 
 //變數轉型 : url路徑 / class 名稱 / 屬性名稱 都需要使用字串轉變數 #{變數}
+=======
+
+// spacing
+@for $i from 1 through 10 {
+  .border-radius-#{$i} {
+    border-radius: $i * 4px;
+  }
+}
+
+header {
+  display: flex;
+  width: 1920px;
+  padding: 0px 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  .logo {
+    width: 102px;
+    height: 72px;
+  }
+  nav {
+    display: flex;
+    width: 325px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 0px 13px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+}
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669

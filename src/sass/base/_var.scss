@@ -1,9 +1,16 @@
 // 數值型態
 $fontSize: 20px; // 數值
-$bgcolor: #fffd9f; //color
+$bgcolor: #00ffae; //color
 $list: 0; //list
 
 //斷點控制
 
 $m: 720px;
+<<<<<<< HEAD
 $t: 1024px;
+=======
+$t: 1024px;
+
+
+//變數轉型 : url路徑 / class 名稱 / 屬性名稱 都需要使用字串轉變數 #{變數}
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669

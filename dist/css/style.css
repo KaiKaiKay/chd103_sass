@@ -211,7 +211,7 @@ a:hover {
 }
 
 body {
-  background-color: #fffd9f;
+  background-color: #00ffae;
   font-size: 20px;
   margin: 0;
   padding: 0;
@@ -234,6 +234,73 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+span {
+  font-size: 14px;
+}
+
+div {
+  font-size: 16px;
+}
+
+.title_h2 {
+  font-size: 38px;
+}
+
+.primary_bg {
+  background-color: #4b4efc;
+}
+
+.primary_color {
+  color: #4b4efc;
+}
+
+.secondary_bg {
+  background-color: #aa72f8;
+}
+
+.secondary_color {
+  color: #aa72f8;
+}
+
+.success_bg {
+  background-color: #4ade80;
+}
+
+.success_color {
+  color: #4ade80;
+}
+
+.warning_bg {
+  background-color: #F59E0B;
+}
+
+.warning_color {
+  color: #F59E0B;
+}
+
+.error_bg {
+  background-color: #EF4444;
+}
+
+.error_color {
+  color: #EF4444;
+}
+
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -462,6 +529,25 @@ h1 {
     width: 16.66666%;
   }
 }
+<<<<<<< HEAD
+=======
+.banner .img_slider1 {
+  background-image: url("images/slider1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner .img_slider2 {
+  background-image: url("images/slider2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner .img_slider3 {
+  background-image: url("images/slider3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669
 header {
   width: 100%;
   background-color: #ffb302;
@@ -500,6 +586,9 @@ footer {
   color: #fff;
 }
 
+.index {
+  height: 2000px;
+}
 .index h1 {
   color: #f2ff00;
 }
@@ -538,4 +627,66 @@ footer {
 
 .a {
   color: #f20;
+}
+
+.border-radius-1 {
+  border-radius: 4px;
+}
+
+.border-radius-2 {
+  border-radius: 8px;
+}
+
+.border-radius-3 {
+  border-radius: 12px;
+}
+
+.border-radius-4 {
+  border-radius: 16px;
+}
+
+.border-radius-5 {
+  border-radius: 20px;
+}
+
+.border-radius-6 {
+  border-radius: 24px;
+}
+
+.border-radius-7 {
+  border-radius: 28px;
+}
+
+.border-radius-8 {
+  border-radius: 32px;
+}
+
+.border-radius-9 {
+  border-radius: 36px;
+}
+
+.border-radius-10 {
+  border-radius: 40px;
+}
+
+header {
+  display: flex;
+  width: 1920px;
+  padding: 0px 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+header .logo {
+  width: 102px;
+  height: 72px;
+}
+header nav {
+  display: flex;
+  width: 325px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 0px 13px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }

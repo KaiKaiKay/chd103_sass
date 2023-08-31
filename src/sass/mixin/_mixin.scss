@@ -167,4 +167,18 @@ a {
       }
     }
   }
+<<<<<<< HEAD
+=======
+}
+
+//背景圖片路徑
+@mixin img($class) {
+  @each $img in $class {
+    .img_#{$img} {
+      background-image: url("images/#{$img}.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+>>>>>>> c68dc2b4c1c277aa675235018e7763e159eb6669
 }
